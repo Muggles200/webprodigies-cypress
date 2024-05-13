@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS "subscriptions" (
 	"id" text PRIMARY KEY NOT NULL,
 	"user_id" uuid NOT NULL,
-	"status" "subscription_status",
+	"status" public.subscription_status,
 	"metadata" jsonb,
 	"price_id" text,
 	"quantity" integer,
