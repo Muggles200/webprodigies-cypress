@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS "collaborators" (
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL,
 	"user_id" uuid NOT NULL
 );
---> statement-breakpoint
+-- > statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "collaborators" ADD CONSTRAINT "collaborators_workspace_id_workspaces_id_fk" FOREIGN KEY ("workspace_id") REFERENCES "workspaces"("id") ON DELETE cascade ON UPDATE no action;
 EXCEPTION
